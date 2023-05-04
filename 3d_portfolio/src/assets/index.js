@@ -25,10 +25,13 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import briefcase from './company/briefcase_logo.png'
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import filmpire from './Filmpire.png';
+import refine from './refine.png';
 
 export {
   logo,
@@ -56,7 +59,10 @@ export {
   shopify,
   starbucks,
   tesla,
+  briefcase,
   carrent,
   jobit,
   tripguide,
+  filmpire,
+  refine
 };

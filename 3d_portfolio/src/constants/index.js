@@ -19,7 +19,10 @@ import {
   starbucks,
   tesla,
   shopify,
+  briefcase,
   carrent,
+  filmpire,
+  refine,
   jobit,
   tripguide,
   threejs,
@@ -104,63 +107,33 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Chemical Operator",
+    company_name: "Koppers Performance Chemical",
+    icon: briefcase,
+    iconBg: "#FFFFFF",
+    date: "Dec 2016 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Test product samples for specific particle size and copper percentage.",
+      "Work successfully with a diverse group of coworkers to accomplish goals and address issues related to ourproducts and services.",
+      "Assist in training multiple employees in our work process and workplace safety.",
+      "Took the initiative to learn the entire process to make and ship our product.",
+      "Demonstrate self-reliance by meeting and exceeding workflow needs.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Team Lead(Volunteer)",
+    company_name: "Lambda School",
+    icon: briefcase,
+    iconBg: "#FFFFFF",
+    date: "Dec 2019 - Feb 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Served as teaching assistant leading team of 10 students in daily code challenges in HTML, CSS, and JS.",
+      "Delivered 1:1 feedback and code reviews on a weekly basis, and gave students feedback on areas of improvement.",
+      "Led daily standup meetings to build camaraderie, facilitate the sharing of ideas and work progress, and provide guidance for that week’s study material",
     ],
   },
 ];
@@ -194,45 +167,45 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Filmpire",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This web application enables users to sign in, favorite, and add movies to their watchlist. Additionally, users can view movie and actor details, as well as watch trailers provided by TMDB.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "MUI",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "alanAi",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: filmpire,
+    source_code_link: "https://github.com/tdavis1991/filmpire",
   },
   {
-    name: "Job IT",
+    name: "Refine",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
+        name: "refine",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "react",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "mongodb",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: refine,
     source_code_link: "https://github.com/",
   },
   {

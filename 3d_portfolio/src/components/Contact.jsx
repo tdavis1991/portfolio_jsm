@@ -7,6 +7,10 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+//template_p4c121w
+//service_tmb745v
+//ettoswJaWyK3aCezc
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -16,12 +20,45 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = () => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
+    setForm({ ...form, [name]: value })
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
+
+    emailjs.send(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID, 
+      {
+        from_name: form.name,
+        to_name: 'Tevin',
+        from_email: form.email,
+        to_email: 'tdavis.070991@gmail.com',
+        message: form.message,
+      },
+      import.meta.env.VITE_PRIVATE_KEY
+      )
+      .then(() => {
+        setLoading(false);
+        window.alert('Thank you. I will get back to you as soon as possible')
+
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }), (error) => {
+        setLoading(false);
+
+        console.log(error);
+
+        window.alert('Something went wrong.')
+      }
   };
 
   return (
