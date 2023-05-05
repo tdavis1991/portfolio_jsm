@@ -28,7 +28,7 @@ const ReadMore = ({ text, maxLength }) => {
   );
 };
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => {
 
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
@@ -47,14 +47,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             className='w-full h-full object-cover rounded-2xl'  
           />
           <div className='absolute inset-0 flex justify-between m-3 card-img_hover'>
-          {/* create another icon to link to deployed projects */}
             <Link
-                to={source_code_link}
+                to={website_link}
                 className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img 
                   src={website}
-                  alt='github'
+                  alt='website'
                   className='w-1/2 h-1/2 object-contain'
                 />
             </Link>
@@ -72,7 +71,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          {/* <p className='mt-2 text-secondary text-[14px]'>{description}</p> */}
           <ReadMore text={description} maxLength={150} />
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>

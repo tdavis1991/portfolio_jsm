@@ -5,6 +5,7 @@ import {
   web,
   javascript,
   typescript,
+  python,
   html,
   css,
   reactjs,
@@ -23,6 +24,7 @@ import {
   carrent,
   filmpire,
   refine,
+  gpt,
   jobit,
   tripguide,
   threejs,
@@ -74,6 +76,10 @@ const technologies = [
   {
     name: "TypeScript",
     icon: typescript,
+  },
+  {
+    name: "Python",
+    icon: python,
   },
   {
     name: "React JS",
@@ -169,7 +175,7 @@ const projects = [
   {
     name: "Filmpire",
     description:
-      "This web application enables users to sign in, favorite, and add movies to their watchlist. Additionally, users can view movie and actor details, as well as watch trailers provided by TMDB.",
+      "Web application built using React and MUI that enables users to sign in, favorite, and add movies to their watchlist. Additionally, users can view movie and actor details, as well as watch trailers provided by TMDB. Also, it has integrated voice command powered by Alan Ai.",
     tags: [
       {
         name: "react",
@@ -186,6 +192,7 @@ const projects = [
     ],
     image: filmpire,
     source_code_link: "https://github.com/tdavis1991/filmpire",
+    website_link: "https://filmpire-frost.netlify.app/",
   },
   {
     name: "Refine",
@@ -207,27 +214,29 @@ const projects = [
     ],
     image: refine,
     source_code_link: "https://github.com/tdavis1991/yariga",
+    website_link: "https://refine-frost.netlify.app/",
   },
   {
-    name: "Trip Guide",
+    name: "GPT-3",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "This is a fully responsive UI/UX website built using React. Its visually appealing design combines beautiful gradients with carefully selected colors and layout designs.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
+      // {
+      //   name: "supabase",
+      //   color: "green-text-gradient",
+      // },
       {
         name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: gpt,
+    source_code_link: "https://github.com/tdavis1991/GPT3",
+    website_link: "https://gpt3-frost.netlify.app/",
   },
 ];
 
