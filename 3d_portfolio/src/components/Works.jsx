@@ -1,11 +1,32 @@
+import { useState } from 'react';
 import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
-import { github } from '../assets';
+import { github, website } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+
+const ReadMore = ({ text, maxLength }) => {
+  const [isTruncated, setIsTruncated] = useState(true);
+
+  const toggleTruncate = () => {
+    setIsTruncated(!isTruncated);
+  };
+
+  if (text.length <= maxLength) {
+    return <p>{text}</p>;
+  }
+
+  return (
+    <div>
+      <p className='mt-2 text-secondary text-[14px]'>{isTruncated ? `${text.slice(0, maxLength)}...` : text}</p>
+      <button onClick={toggleTruncate}>{isTruncated ? 'Read More' : 'Read Less'}</button>
+    </div>
+  );
+};
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
 
@@ -25,11 +46,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             alt={name} 
             className='w-full h-full object-cover rounded-2xl'  
           />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-between m-3 card-img_hover'>
           {/* create another icon to link to deployed projects */}
-            <div
-              onClick={() => window.open(so
-              , '_blank')}
+            <Link
+                to={source_code_link}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <img 
+                  src={website}
+                  alt='github'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+            </Link>
+            <Link
+              to={source_code_link}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img 
@@ -37,12 +67,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 alt='github'
                 className='w-1/2 h-1/2 object-contain'
               />
-            </div>
+            </Link>
           </div>
         </div>
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          {/* <p className='mt-2 text-secondary text-[14px]'>{description}</p> */}
+          <ReadMore text={description} maxLength={150} />
         </div>
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (

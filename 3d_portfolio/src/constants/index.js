@@ -190,7 +190,7 @@ const projects = [
   {
     name: "Refine",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This web application, built using Refine and React, allows users to sign in, create properties, view their properties, and delete their properties through CRUD operations using Mongoose and MongoDB. The application enables users to create various types of properties, collect and store relevant data for each property, and manage their properties efficiently.",
     tags: [
       {
         name: "refine",
@@ -206,7 +206,7 @@ const projects = [
       },
     ],
     image: refine,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/tdavis1991/yariga",
   },
   {
     name: "Trip Guide",
